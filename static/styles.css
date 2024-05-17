@@ -1,0 +1,366 @@
+body{
+  background: rgb(0, 191, 255);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.Title{
+  text-align: center;
+  margin: 10px;
+  font-size: 80px; /* Tamaño del texto */
+  color: #ffffff; /* Color del texto */
+  text-transform: uppercase; /* Convierte el texto a mayúsculas */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra del texto */
+}
+
+.TitleContainer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+
+  
+  .Projects_link{
+    text-align: center;
+    margin: 40px;
+    font-size: 30px; /* Tamaño del texto */
+    color: #ffffff; /* Color del texto */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra del texto */
+    text-decoration: none;
+    border: 1px solid #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+  }
+}
+
+.FilmDisplay{
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr)); /* Columnas automáticas con un ancho mínimo de 200px */
+  gap: 15px; /* Espacio entre elementos */
+  margin: 10px;
+
+  .Film_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    border: 1px solid #000;
+    background-color: #ffffff;
+    border-radius: 5px;
+    width: 100%; /* Utiliza el ancho completo del contenedor grid */
+    height: 100%; /* Utiliza el alto completo del contenedor grid */
+
+    a{
+      text-decoration: none;
+      color: #000;
+
+    }
+  }
+
+  .Film{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      width: 100%; /* Utiliza el ancho completo del contenedor grid */
+      height: 650px; /* Utiliza el alto completo del contenedor grid */
+    
+      img{
+          width: 80%;
+          height: auto ;
+          max-height: 500px;
+      }
+  }
+
+}
+
+.FilterContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 10px;
+
+  .select_filter{
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid #000;
+      border-radius: 5px;
+      text-decoration: none;
+      color: #000;
+      width: 80%;
+      height: auto;
+  }
+  
+  .name_input{
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid #000;
+      border-radius: 5px;
+      text-decoration: none;
+      color: #000;
+      width: 80%;
+      height: auto;
+  }
+}
+
+.FilmBrandName {
+  text-transform: uppercase;
+}
+
+.SingleFilm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Agrega esta línea para centrar verticalmente */
+  margin: 0 auto; /* Cambia margin: 10px; a margin: 0 auto; */
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #000;
+  max-width: 70%; /* Cambia width: 80%; a max-width: 80%; */
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+
+  .FilmFeatures{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+      margin: 10px;
+
+      .FilmDetails{
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          margin: 15px;
+          border: 1px solid #000;
+          border-radius: 5px;
+          padding: 10px;
+      }
+
+      .FilmKeyFeatures{
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          margin: 15px;
+          border: 1px solid #000;
+          border-radius: 5px;
+          padding: 10px;
+
+          .Features{
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              justify-content: space-between;
+          }
+      }
+  }
+}
+
+.Modal_button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.Modal_container {
+
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+
+  /* Modal Content */
+  .modal_content {
+    margin: 50px auto; /* 15% from the top and centered */
+    background-color: #ffffff;
+    padding: 10px;
+    height: 50%;
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+
+
+    .button_{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin: 10px;
+      background-color: rgb(0, 191, 255);
+      border-radius: 5px;
+      font-size: large;
+
+    }
+
+    .create_section{
+      display: none;
+      
+      .create_items{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+      }
+
+      .create_buttons{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 10px;
+      }
+    }
+    
+    .add_section{
+      display: none;
+
+      .add_items{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+
+
+        .add_buttons{
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          margin: 10px;
+        }
+      }
+    }
+  }
+}
+
+.Error_page {
+  text-align: center; /* Centra el contenido de la página */
+  margin: 0 auto; /* Centra la página horizontalmente */
+  margin-top: 300px; /* Añade espacio en la parte superior de la página */
+  width: 80%; /* Ajusta el ancho de la página */
+  padding: 20px; /* Añade espacio alrededor del contenido */
+  border: 1px solid #ccc; /* Añade un borde alrededor de la página */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Añade una sombra para darle profundidad */
+  
+  a {
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    color: #000000; /* Cambia el color del enlace */
+    background-color: #eee; /* Añade un fondo al enlace */
+    padding: 5px 10px; /* Añade espacio alrededor del texto del enlace */
+    border-radius: 5px; /* Redondea las esquinas del enlace */
+  }
+}
+
+.ProjectDisplay {
+  display: flex; /* Este lo hago con flex para variar */
+  flex-direction: column;
+  justify-content: center;
+  margin: 20px;
+
+  /* Project Container Styles */
+  .Project_container {
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    width: auto;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+  }
+
+  .Project_container h1 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+}
+
+.ModalContainer{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  .Modal_modify_button{
+    background-color: #b700ff;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .Modal_delete_button{
+    background-color: #ff0000;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+}
+
+/* The Close Button */
+.close {
+  position:fixed;
+  color: #000000;
+  margin-top: 3%;
+  margin-left: 74%;
+  /*Lo bajo*/
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #ff0000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+select{
+  font-size: large;
+}
+
+input{
+  font-size: large;
+}
